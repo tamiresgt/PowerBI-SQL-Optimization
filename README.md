@@ -2,6 +2,7 @@
 
 ## Project Overview
 This project demonstrates how to optimize a Power BI model by reducing the number of relationships between tables using SQL preprocessing. The dataset used is the Contoso Microsoft Database, and the main goal is to improve report performance by reducing model complexity.
+![github_PowerBIOptimization](https://github.com/user-attachments/assets/94c3db33-1129-49dc-9b54-55b7b68149e9)
 
 ## Data Model Before Optimization
 Initially, the Power BI model contained the following tables:
