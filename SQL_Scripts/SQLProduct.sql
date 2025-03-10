@@ -1,0 +1,12 @@
+create view vwProduct as
+SELECT 
+DimProduct.ProductKey,
+DimProduct.ProductName,
+DimProduct.BrandName,
+DimProduct.UnitCost,
+DimProduct.UnitPrice,
+DimProductSubcategory.ProductSubcategoryName,
+DimProductCategory.ProductCategoryName
+from DimProduct
+LEFT JOIN DimProductSubcategory ON DimProduct.ProductSubcategoryKey =DimProductSubcategory.ProductSubcategoryKey
+LEFT JOIN DimProductCategory ON DimProductSubcategory.ProductCategoryKey = DimProductCategory.ProductCategoryKey
