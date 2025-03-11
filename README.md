@@ -8,13 +8,13 @@ This project demonstrates how to optimize a Power BI model by reducing the numbe
 Initially, the Power BI model contained the following tables:
 
 - FactSales
+- FactExchangeRate
 - DimPromotion
 - DimStore
 - DimGeography
 - DimProduct
 - DimProductCategory
 - DimProductSubcategory
-- FactExchangeRate
 - DimCurrency
 
 ## Optimization Strategy
@@ -32,10 +32,11 @@ Initially, the same optimization was attempted directly within Power BI using th
 
 ## Data Model After Optimization
 After applying SQL transformations, the new Power BI model has fewer tables and relationships, leading to improved performance. The modified tables include:
-- FactSalesOptimized (Reduction of columns and adjustment of date data)
-- DimProductHierarchy (Combining DimProduct, DimProductCategory, and DimProductSubcategory)
+- FactSales (Reduction of columns and adjustment of date data)
+- DimProduct (Combining DimProduct, DimProductCategory, and DimProductSubcategory)
 - FactExchangeRate (Combining DimCurrency and adjustment of date data)
 - DimStore (Combining DimGeography)
+- DimPromotion (Deleted because it has the same information in the FacSales table in the DiscountAmount column)
 
 ## SQL Transformations
 You can find all SQL scripts used in the SQL_Scripts folder.
